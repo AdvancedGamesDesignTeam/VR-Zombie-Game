@@ -58,24 +58,15 @@ namespace WeaponInteract
         {
             if (!_gripInteract) return;
             SwitchMode();
-            // if (switched) return;
-            // if (!_gripInteract.SwitchFireMode(_gripController))
-            // {
-            //     switched = false;
-            //     Debug.Log("cum");
-            //     return;
-            // }
-            // _barrel.singleFireMode = !_barrel.singleFireMode;
-            // switched = true;
-            // Debug.Log("ola");
         }
 
         private void SwitchMode()
         {
+            if (_barrel.isOnlySingleFireMode) return;
             if (!_gripInteract.SwitchFireMode(_gripController)) return;
             if (switched) return;
             switched = true;
-            _barrel.singleFireMode = !_barrel.singleFireMode;
+            _barrel.isOnSingleFireMode = !_barrel.isOnSingleFireMode;
         }
 
         private void OnDestroy()

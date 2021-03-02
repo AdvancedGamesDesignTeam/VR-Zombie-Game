@@ -12,6 +12,8 @@ namespace WeaponInteract
             base.BeginAction(args);
             Controller = args.interactor.GetComponent<XRController>();
             Controller.inputDevice.IsPressed(InputHelpers.Button.Trigger, out _isPressed);
+            //If i want the button press to be registered when it's almost pressed in, have to continuously check
+            //for IsPressed instead of (how it seems) being checked once on BeginAction. Default threshold 0.1f
             if(_isPressed) Weapon.PullTrigger();
         }
 

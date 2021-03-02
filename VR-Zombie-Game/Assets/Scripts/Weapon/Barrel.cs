@@ -12,11 +12,11 @@ public class Barrel : MonoBehaviour
         Ray
     }
     public ShootingType shootingType;
-    public bool singleFireMode;
+    public bool isOnlySingleFireMode;
+    public bool isOnSingleFireMode;
     public int magazineSize;
     public int currentMagazineSize;
     public float fireSpeed;
-    public GameObject bulletPrefab;
     private bool singleFired;
     private Weapon _weapon;
     private Coroutine firing;
@@ -24,37 +24,30 @@ public class Barrel : MonoBehaviour
     private WaitForSeconds waitForSeconds;
     private WaitForSeconds waitForSecondsRel;
     private RaycastHit _hit;
-    //Variables used for physical bullet shooting below
-    private int currentBullet;
-    private static GameObject[] pooledBullets;
-    private static RigidBullet[] pooledRigids;
-    [SerializeField] private int amountToPool;
+    private BulletPooling _bulletPoolingScript;
     [SerializeField] private float reloadTime;
     public bool SingleFired
     {
-        get => singleFired;
         set => singleFired = value;
     }
 
     public void Setup(Weapon weapon)
     {
         _weapon = weapon;
-        pooledBullets = new GameObject[amountToPool];
-        pooledRigids = new RigidBullet[amountToPool];
     }
     
     private void Awake()
     {
         waitForSeconds = new WaitForSeconds(fireSpeed);
         waitForSecondsRel = new WaitForSeconds(reloadTime);
-        if(shootingType == ShootingType.Rigidbody) SetUpRigidShoot();
+        _bulletPoolingScript = FindObjectOfType<BulletPooling>();
         currentMagazineSize = magazineSize;
     }
 
     public void Fire()
     {
         if (singleFired) return;
-        if (singleFireMode) singleFired = true;
+        if (isOnSingleFireMode) singleFired = true;
         if (currentMagazineSize <= 0) return;
         firing = StartCoroutine(FiringSeq());
     }
@@ -90,12 +83,12 @@ public class Barrel : MonoBehaviour
             StopCoroutine(firing);
             return;
         }
-        currentBullet++;
         currentMagazineSize--;
         if (shootingType == ShootingType.Rigidbody)
         {
-            if (currentBullet == amountToPool) currentBullet = 0;
-            RigidShoot(pooledRigids[currentBullet]);
+            _bulletPoolingScript.currentBullet++;
+            _bulletPoolingScript.CheckCurrentBullet();
+            RigidShoot(_bulletPoolingScript.GetCurrentBullet());
         }
         else RayBulletShoot();
     }
@@ -117,17 +110,6 @@ public class Barrel : MonoBehaviour
         currentMagazineSize = magazineSize;
         _weapon.UseVibration();
         yield return null;
-    }
-
-    private void SetUpRigidShoot()
-    {
-        var parent = new GameObject("BulletPooling").GetComponent<Transform>();
-        for (var i = 0; i < amountToPool; i++)
-        {
-            var bullet = Instantiate(bulletPrefab, parent, true);
-            pooledBullets[i] = bullet;
-            pooledRigids[i] = bullet.GetComponent<RigidBullet>();
-        }
     }
 
     private void RayBulletShoot()

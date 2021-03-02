@@ -158,6 +158,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &55527531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55527533}
+  - component: {fileID: 55527532}
+  m_Layer: 0
+  m_Name: --BulletManager--
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &55527532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55527531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8166880c442f4644a9a5c92fb2b4e1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountToPool: 100
+  bulletPrefab: {fileID: 3729419651651149775, guid: a317b0f9b09c094429c8f744009b0bd8,
+    type: 3}
+  currentBullet: 0
+--- !u!4 &55527533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55527531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.055788763, y: 0.8635, z: 0.32618862}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &122287782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,13 +1573,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingType: 1
-  singleFireMode: 0
+  isOnSingleFireMode: 1
   magazineSize: 10
   currentMagazineSize: 0
   fireSpeed: 0.2
-  bulletPrefab: {fileID: 3729419651651149775, guid: a317b0f9b09c094429c8f744009b0bd8,
-    type: 3}
-  amountToPool: 30
+  isOnlySingleFireMode: 1
   reloadTime: 1
 --- !u!1 &607527950
 GameObject:
@@ -3332,7 +3377,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!1 &1703474277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,7 +3695,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!1 &1750105997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,13 +3740,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingType: 0
-  singleFireMode: 0
+  isOnSingleFireMode: 1
   magazineSize: 10
   currentMagazineSize: 0
   fireSpeed: 0.2
-  bulletPrefab: {fileID: 3729419651651149775, guid: a317b0f9b09c094429c8f744009b0bd8,
-    type: 3}
-  amountToPool: 30
+  isOnlySingleFireMode: 1
   reloadTime: 1
 --- !u!1 &1792043458
 GameObject:
@@ -4222,7 +4265,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!1 &1988335757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,13 +4744,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingType: 0
-  singleFireMode: 1
+  isOnSingleFireMode: 0
   magazineSize: 30
   currentMagazineSize: 0
   fireSpeed: 0.2
-  bulletPrefab: {fileID: 3729419651651149775, guid: a317b0f9b09c094429c8f744009b0bd8,
-    type: 3}
-  amountToPool: 30
+  isOnlySingleFireMode: 0
   reloadTime: 2
 --- !u!1 &2097569587
 GameObject:
