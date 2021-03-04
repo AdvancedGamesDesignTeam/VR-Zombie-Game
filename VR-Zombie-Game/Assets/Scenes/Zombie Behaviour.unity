@@ -392,6 +392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie_Grunt
       objectReference: {fileID: 0}
+    - target: {fileID: 2397593955704953569, guid: 3043ed142802fbf43a642db78e758f9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2714005121552216960, guid: 3043ed142802fbf43a642db78e758f9d,
         type: 3}
       propertyPath: player
