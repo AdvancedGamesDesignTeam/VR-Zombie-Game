@@ -6,10 +6,18 @@ using AI.BehaviourTree;
 
 namespace AI.ZombieBehaviour
 {
+    public enum ZombieType
+    {
+        GRUNT,
+        SPITTER
+    }
+
     public class ZombieAI : MonoBehaviour
     {
+        
         private Node topNode;
         private float fovAngle = 110f;
+        [SerializeField] ZombieType zombieType;
         [SerializeField] private float health = 100;
         [SerializeField] private GameObject player;
         [SerializeField] private float soundPerceptionRadius = 30f;
