@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: edcad0e1e7b06d8468817c5f816faa7f
+guid: a374452b7e42d7a49a6e4792480aa9d3
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -37,7 +40,7 @@ ModelImporter:
     - 0.25
     - 0.125
     - 0.01
-    globalScale: 1
+    globalScale: 2.75
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -84,7 +87,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 2.75
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
