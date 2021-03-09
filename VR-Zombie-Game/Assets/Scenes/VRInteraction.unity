@@ -599,6 +599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411324713}
   - component: {fileID: 411324714}
+  - component: {fileID: 411324715}
   m_Layer: 0
   m_Name: ReloadArea
   m_TagString: Untagged
@@ -633,6 +634,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &411324715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411324712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4a8c20a999602428aec8eaaeacdcf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collider: {fileID: 0}
 --- !u!1 &425387269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,11 +1587,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingType: 1
+  isOnlySingleFireMode: 1
   isOnSingleFireMode: 1
   magazineSize: 10
   currentMagazineSize: 0
   fireSpeed: 0.2
-  isOnlySingleFireMode: 1
   reloadTime: 1
 --- !u!1 &607527950
 GameObject:
@@ -3347,8 +3361,7 @@ MonoBehaviour:
   m_RetainTransformParent: 1
   breakDistance: 0.25
   recoilAmount: 25
-  oneHanded: 0
-  reloadArea: {fileID: 0}
+  oneHanded: 1
 --- !u!65 &1659528007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3665,8 +3678,7 @@ MonoBehaviour:
   m_RetainTransformParent: 1
   breakDistance: 0.25
   recoilAmount: 25
-  oneHanded: 0
-  reloadArea: {fileID: 0}
+  oneHanded: 1
 --- !u!65 &1744922147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3740,11 +3752,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingType: 0
+  isOnlySingleFireMode: 1
   isOnSingleFireMode: 1
   magazineSize: 10
   currentMagazineSize: 0
   fireSpeed: 0.2
-  isOnlySingleFireMode: 1
   reloadTime: 1
 --- !u!1 &1792043458
 GameObject:
@@ -4249,7 +4261,6 @@ MonoBehaviour:
   breakDistance: 0.25
   recoilAmount: 25
   oneHanded: 0
-  reloadArea: {fileID: 0}
 --- !u!54 &1840514484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4485,9 +4496,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2060111127}
-  - component: {fileID: 2060111130}
   - component: {fileID: 2060111129}
   - component: {fileID: 2060111128}
+  - component: {fileID: 2060111130}
   m_Layer: 8
   m_Name: Handguard
   m_TagString: Untagged
@@ -4744,11 +4755,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingType: 0
+  isOnlySingleFireMode: 0
   isOnSingleFireMode: 0
   magazineSize: 30
   currentMagazineSize: 0
   fireSpeed: 0.2
-  isOnlySingleFireMode: 0
   reloadTime: 2
 --- !u!1 &2097569587
 GameObject:

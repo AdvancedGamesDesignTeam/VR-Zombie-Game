@@ -124,6 +124,4 @@ public class Barrel : MonoBehaviour
     {
         bullet.LaunchProjectile(transform);
     }
-    
-    //Still need to make so weapons can have only single fire mode instead of both single/automatic
 }

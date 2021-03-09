@@ -9,9 +9,6 @@ namespace WeaponInteract
     public class Weapon : XRGrabInteractable
     {
         private bool switched;
-        public float breakDistance = 0.25f;
-        public int recoilAmount = 25;
-        public bool oneHanded;
         private GripInteract _gripInteract;
         private XRBaseInteractor _gripHand;
         private XRController _gripController;
@@ -21,7 +18,11 @@ namespace WeaponInteract
         private Rigidbody rb;
         private readonly Vector3 gripRot = new Vector3(45,0,0);
         private Quaternion lookRotation;
-        [SerializeField] private Collider reloadArea;
+        private ReloadArea _reloadArea;
+        [Tooltip("Value for two handed weapons to check distance between hands and drop weapon if it's too far")]
+        [SerializeField] private float breakDistance = 0.25f;
+        [SerializeField] private int recoilAmount = 25;
+        [SerializeField] private bool oneHanded;
         public bool Switched
         {
             get => switched;
@@ -34,7 +35,7 @@ namespace WeaponInteract
             SetUpHolds();
             SetUpExtra();
             selectEntered.AddListener(SetIniRotation);
-            reloadArea = GameObject.Find("ReloadArea").GetComponent<Collider>(); //Change this ASAP when variables work in inspector
+            _reloadArea = FindObjectOfType<ReloadArea>();
         }
 
         private void SetUpHolds()
@@ -43,7 +44,6 @@ namespace WeaponInteract
             _gripInteract.Setup(this);
             if (oneHanded) return; //Leave this for when i can change variables in inspector again
             _handguardInteract = GetComponentInChildren<HandguardInteract>();
-            if (!_handguardInteract) return; //Remove when variables in inspector back
             _handguardInteract.Setup(this);
         }
 
@@ -161,13 +161,13 @@ namespace WeaponInteract
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other != reloadArea) return;
+            if (other != _reloadArea.Collider) return;
             _barrel.Reload();
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other != reloadArea) return;
+            if (other != _reloadArea.Collider) return;
             _barrel.StopReload();
         }
 
