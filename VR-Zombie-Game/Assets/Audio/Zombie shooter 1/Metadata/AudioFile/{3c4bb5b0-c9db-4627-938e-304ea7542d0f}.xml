@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{3c4bb5b0-c9db-4627-938e-304ea7542d0f}">
+		<property name="assetPath">
+			<value>Ghost/Ghosthack Advent Calendar 2017 Day 6 - Foley Perc/Dry/Foley Perc (2).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.90691609977324261</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>

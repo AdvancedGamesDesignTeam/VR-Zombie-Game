@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{37680bd9-e6bc-4881-9e1f-86f3c50d75bb}">
+		<property name="assetPath">
+			<value>Sound effects/Impacting sounds/impactSoft_heavy_000.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.50510204081632648</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>

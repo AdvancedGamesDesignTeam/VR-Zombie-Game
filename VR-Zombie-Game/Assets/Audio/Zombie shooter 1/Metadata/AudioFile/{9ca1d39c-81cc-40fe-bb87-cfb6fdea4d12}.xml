@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{9ca1d39c-81cc-40fe-bb87-cfb6fdea4d12}">
+		<property name="assetPath">
+			<value>Ghost/Ghosthack - Free Female Vocals/Dry/I can hear your voice.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8999999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>

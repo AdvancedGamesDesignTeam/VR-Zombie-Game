@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{6f4f55e0-c17e-464e-a3c8-956205e8a6c2}">
+		<property name="assetPath">
+			<value>Ghost/Ghosthack - Free Female Vocals/FX/Lalala.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.1243083900226756</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>

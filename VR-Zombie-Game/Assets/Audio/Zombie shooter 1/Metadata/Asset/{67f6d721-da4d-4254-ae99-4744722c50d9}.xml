@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{67f6d721-da4d-4254-ae99-4744722c50d9}">
+		<property name="assetPath">
+			<value>Ghost/Ghosthack Advent Calendar 2017 Day 17 - DnB Loops/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>

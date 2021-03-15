@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{2d49f5dc-ad1d-4d87-9123-2b3db26c5751}">
+		<property name="assetPath">
+			<value>Ghost/Ghosthack Advent Calendar 2017 Day 21 - DubstepBass/Bass Hits/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>

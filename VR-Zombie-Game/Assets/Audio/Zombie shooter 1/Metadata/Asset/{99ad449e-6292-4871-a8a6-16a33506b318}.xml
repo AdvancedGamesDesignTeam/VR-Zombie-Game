@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{99ad449e-6292-4871-a8a6-16a33506b318}">
+		<property name="assetPath">
+			<value>Ghost/Ghosthack - Neurofunk Pack/Hi-Hats/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{84cdb71f-7808-4e04-a04d-8fe895f6d6e6}</destination>
+		</relationship>
+	</object>
+</objects>
