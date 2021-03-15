@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: ea839ed9abfb4db43b9a79b19cc672c9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f53f5fc499d31e44b9deee84d28a9ee8, type: 3}
+  rootGameObjectId: 
+  rootGameObjectName: 
+  streamSettings:
+    normals: 1
+    tangents: 1
+    cameraAspectRatio: 2
+    importVisibility: 0
+    scaleFactor: 0.1
+    swapHandedness: 1
+    flipFaces: 0
+    interpolateSamples: 0
+    importPointPolygon: 1
+    importLinePolygon: 1
+    importTrianglePolygon: 1
+    importXform: 1
+    importCameras: 0
+    importMeshes: 1
+    importPoints: 0
+  abcStartTime: 0.03333333507180214
+  abcEndTime: 1.5000000782310963
+  startTime: 0.03333333507180214
+  endTime: 1.5000000782310963
+  importWarning: 
+  firstImport: 0
+  isHDF5: 0
